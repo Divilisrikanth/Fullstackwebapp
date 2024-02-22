@@ -1,2 +1,3 @@
-## to get stated with this project ##
-npm install 
+## to get started with this project ##
+ Type npm install 
+ 
