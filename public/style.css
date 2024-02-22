@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.images {
+  width: 95%;
+}
+.title {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  font-size: 1.5rem;
+}
+#cards {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.card {
+  margin-top: 1em;
+  width: 30%;
+  box-shadow: 0 0 0 4px pink;
+  text-align: center;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+.price,
+.desc,
+.categ {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 1em;
+  font-size: 1.2rem;
+}
+
+#heading {
+  text-align: center;
+}
+.signin {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+#userid {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+#usertext {
+  text-align: center;
+}
+#submitbutton {
+  text-align: center;
+}
+#message {
+  padding-top: 0.6 px;
+  text-align: center;
+}
+#errmessage {
+  margin-top: 9px;
+  font-weight: bolder;
+}
+.menubar {
+  display: flex;
+  margin: 10px;
+  justify-content: start;
+}
+#loginbutton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -29px;
+}
+/* For desktop: */
+/*
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+#card {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+/* [id="card"] {
+    width: 100%;
+  }
+}*/
