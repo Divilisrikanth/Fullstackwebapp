@@ -1,3 +1,5 @@
+
+
 let emailValue = document.querySelector('[name="emailid"]')
 
  document.getElementById("mySubmit").onclick=async function geterrormessage(){
@@ -14,7 +16,7 @@ let emailValue = document.querySelector('[name="emailid"]')
             
          }else if(statusCode == 401){
             const data =  await res.json();
-            //console.log(data.msg)
+            console.log(data.msg)
             const datamesg = `<p id = "errmessage">${data.msg}</p>`
             
              document.getElementById("message").innerHTML = datamesg;
