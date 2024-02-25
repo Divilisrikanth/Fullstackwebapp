@@ -6,14 +6,14 @@ const router = express.Router();
     getProducts,
     loginPage,
     signupPage,
-    //invalidUsername,
+    invalidUsername,
 }=require('../controllers/route')
 
  router.route("/").get(home)
  router.route("/api/v1/items").get(getProducts)
  router.route("/login.html").get(loginPage)
  router.route("/").post(signupPage) 
-//router.route("/errormsg").get(invalidUsername)
+ router.route("/errormsg").get(invalidUsername)
 
 module.exports = router;
 
