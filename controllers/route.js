@@ -19,20 +19,19 @@ const asyncWrapper = require('../middleware/async')
 
  const signupPage = asyncWrapper(async (req, res) => {
    console.log(req.body.emailid);
-   if (req.body.emailid === "abc@gmail.com") {
+   if (req.body.emailid == "abc@gmail.com") {
      res.status(200).redirect("signup.html");
      console.log(req.body.emailid);
-   } 
-   else{
-      const msg = "please Enter valid Email id";
-       res.status(401).redirect('login.html')
-       console.log(msg)
+   }else {
+      //  const msg = "please Enter valid Email id";
+      return res.status(401).invalidUsername
    }
  });
  const invalidUsername = asyncWrapper(async (req, res) => {
        const msg = "please Enter valid Email id";
-       res.status(401).json({ msg });
+       res.status(401).json({ msg })
        console.log(msg)
+       //console.log(msg)
      });
 
 module.exports = {
@@ -40,6 +39,7 @@ module.exports = {
     getProducts,
     loginPage,
     signupPage,
+    invalidUsername,
     
 };
 
