@@ -24,22 +24,44 @@ const asyncWrapper = require('../middleware/async')
      console.log(req.body.emailid);
    }else {
       //  const msg = "please Enter valid Email id";
-      return res.status(401).invalidUsername
+      invalidUsername
    }
  });
+
  const invalidUsername = asyncWrapper(async (req, res) => {
        const msg = "please Enter valid Email id";
        res.status(401).json({ msg })
        console.log(msg)
        //console.log(msg)
      });
-
+  const validation = asyncWrapper(async (req, res) => {
+   res.sendFile(__dirname + "/public/Orderdetails.html");
+ });    
+const authenication = asyncWrapper(async (req, res) => {
+   console.log(req.body.passwordvalue);
+   if (req.body.passwordvalue == "password@123") {
+     res.status(200).redirect("Orderdetails.html");
+     console.log(req.body.password);
+   }else {
+      //  const msg = "please Enter valid Email id";
+      invalidCredentials
+   }
+ }); 
+ const invalidCredentials = asyncWrapper(async (req, res) => {
+       const msg = "please Enter correct password";
+       res.status(401).json({ msg })
+       console.log(msg)
+       //console.log(msg)
+     }); 
 module.exports = {
     home,
     getProducts,
     loginPage,
     signupPage,
+    validation,
     invalidUsername,
+    authenication,
+    invalidCredentials,
     
 };
 
