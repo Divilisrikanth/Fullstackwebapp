@@ -1,4 +1,5 @@
 //const { items } = require("../data");
+const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
  const {
@@ -7,6 +8,9 @@ const router = express.Router();
     loginPage,
     signupPage,
     invalidUsername,
+    validation,
+    authenication,
+    invalidCredentials,
 }=require('../controllers/route')
 
  router.route("/").get(home)
@@ -14,6 +18,10 @@ const router = express.Router();
  router.route("/login.html").get(loginPage)
  router.route("/").post(signupPage) 
  router.route("/errormsg").get(invalidUsername)
+ router.route("/signup.html").get(validation)
+ router.route("/authenicate").post(authenication)
+ router.route("/").get(invalidCredentials)
+
 
 module.exports = router;
 
