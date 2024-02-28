@@ -1,4 +1,5 @@
 const { items } = require("../data");
+const {invalidCredentials,invalidUsername} = require('../middleware/errorhandler')
 const asyncWrapper = require('../middleware/async')
 
 
@@ -28,15 +29,9 @@ const asyncWrapper = require('../middleware/async')
    }
  });
 
- const invalidUsername = asyncWrapper(async (req, res) => {
-       const msg = "please Enter valid Email id";
-       res.status(401).json({ msg })
-       console.log(msg)
-       //console.log(msg)
-     });
   const validation = asyncWrapper(async (req, res) => {
-   res.sendFile(__dirname + "/public/Orderdetails.html");
- });    
+    res.sendFile(__dirname + "/public/Orderdetails.html");
+  });    
 const authenication = asyncWrapper(async (req, res) => {
    console.log(req.body.passwordvalue);
    if (req.body.passwordvalue == "password@123") {
@@ -47,12 +42,7 @@ const authenication = asyncWrapper(async (req, res) => {
       invalidCredentials
    }
  }); 
- const invalidCredentials = asyncWrapper(async (req, res) => {
-       const msg = "please Enter correct password";
-       res.status(401).json({ msg })
-       console.log(msg)
-       //console.log(msg)
-     }); 
+
 module.exports = {
     home,
     getProducts,
