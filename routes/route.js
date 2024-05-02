@@ -1,5 +1,5 @@
 //const { items } = require("../data");
-const { Router } = require("express");
+// const express = require("express");
 const express = require("express");
 const router = express.Router();
  const {
@@ -11,6 +11,11 @@ const router = express.Router();
     validation,
     authenication,
     invalidCredentials,
+    searchproductvalue,
+    searchProducts,
+    productPage
+    
+   
 }=require('../controllers/route')
 
  router.route("/").get(home)
@@ -21,11 +26,16 @@ const router = express.Router();
  router.route("/signup.html").get(validation)
  router.route("/authenicate").post(authenication)
  router.route("/").get(invalidCredentials)
+ router.route("/Details.html/").get(searchproductvalue)
+ //router.route("/Details.html/getuservalue/:id").get(searchProducts)
+ router.route("/getuservalue").get(searchProducts)
+ router.route("/:id").get(productPage)
+
 
 
 module.exports = router;
 
-// route.get("/", (req, res) => {
+// route.get("/", (req, res) => {s
 //    res.send('<h1>Home Page</h1><a href="/api/v1/items">products</a>')
 //      .status(200);
 //  });
