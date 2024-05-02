@@ -78,7 +78,49 @@
   margin-top: -29px;
   width: 95%;
   height: 30px;
+  
+}
+.np_dispm{
+  margin-top: 2em;
+  
+}
+.prod_resp{
+  margin-top: 2em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  text-align: start;
  
+}
+.res_images {
+  max-width: 40%;
+  max-height: 40%;
+  margin-left: 0;
+}
+.res_title{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 295px;
+
+}
+.res_price,
+.res_desc,
+.res_categ {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 1em;
+  font-size: 1.2rem;
+  margin-left: 295px;
+}
+#firstcategoryValue{
+  padding-left: 14px;
+  padding-right: 18px;
+}
+#secondcategoryValue{
+  padding-right: 4px;
+  padding-left: 6px;
+}
+#firstcategorybutt{
+  padding-right: 8px;
 }
 /* For desktop: */
 /*

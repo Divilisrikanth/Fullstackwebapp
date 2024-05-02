@@ -1,5 +1,5 @@
 let emailValue = document.querySelector('[name="emailid"]')
-
+//console.log(emailValue)
  document.getElementById("mySubmit").onclick=async function geterrormessage(){
    try{
       const res = await fetch('http://localhost:5000/errormsg')
